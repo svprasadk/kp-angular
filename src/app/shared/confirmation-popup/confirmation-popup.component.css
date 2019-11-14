@@ -1,0 +1,33 @@
+.confirm-head {
+  font-size: 20px;
+  color: rgb(110, 110, 110);
+  text-align: center;
+  margin-bottom: 50px;
+  /* text-transform: capitalize; */
+}
+.note{
+  text-align: center;
+    /* padding: 0 0px 0 33px; */
+}
+.confirm-txt{
+  font-size: 20px;
+  color: rgb(110, 110, 110);
+  text-align: center;
+  margin-bottom: 50px;
+}
+.pad-40-5 {
+  padding: 40px 5px;
+}
+
+.cancell-btn {
+  color: #fff;
+  padding: 10px 30px;
+  background-color: #474747;
+  margin-right: 20px;
+}
+
+.confirm-btn {
+  color: #fff;
+  padding: 10px 30px;
+  background-color: #d60062;
+}

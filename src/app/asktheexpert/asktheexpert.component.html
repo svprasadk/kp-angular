@@ -1,0 +1,26 @@
+<div class="container pad-20-tb">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3 class="home-head-color">
+        Ask the Expert?
+      </h3>
+    </div>
+  </div>
+  <div class="row">
+    <form [formGroup]="asktheExpertForm">
+      <div class="col-sm-12">
+        <textarea placeholder="Question" formControlName="Question" required cols="186" rows="8"></textarea>
+        <span *ngIf="(isValid && asktheExpertForm.controls.Question.status==='INVALID')"
+          [hidden]="asktheExpertForm.controls.Question.dirty" class="error">
+          Please Provide Question
+      </span>
+      </div>
+      <div style="clear: both;">&nbsp;</div>
+      <div class="col-sm-12 text-right">
+          <a>
+              <button type="submit" class="action-btn liteblue-btn" (click)="Submit()">SEND</button>
+            </a>
+      </div>      
+    </form>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+.updateButton {
+  color: #fff;
+  background-color: #d60062;
+  padding: 10px 30px;
+  font-size: 17px;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.mar-btm-20 {
+  margin-bottom: 20px;
+}

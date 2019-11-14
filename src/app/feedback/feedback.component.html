@@ -1,0 +1,26 @@
+<div class="container pad-20-tb">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3 class="home-head-color">
+        Feedback?
+      </h3>
+    </div>
+  </div>
+  <div class="row">
+    <form [formGroup]="feedbackForm">
+      <div class="col-sm-12">
+        <textarea placeholder="Message" formControlName="Message" required cols="186" rows="8"></textarea>
+        <span *ngIf="(isValid && feedbackForm.controls.Message.status==='INVALID')"
+          [hidden]="feedbackForm.controls.Message.dirty" class="error">
+          Please Provide Message
+      </span>
+      </div>
+      <div style="clear: both;">&nbsp;</div>
+      <div class="col-sm-12 text-right">
+          <a>
+              <button type="submit" class="action-btn liteblue-btn" (click)="Submit()">SEND</button>
+            </a>
+      </div>      
+    </form>
+  </div>
+</div>

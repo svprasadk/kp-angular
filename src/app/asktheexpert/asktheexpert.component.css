@@ -1,0 +1,25 @@
+.home-head-color {
+  color: #aa2b70;
+  margin-bottom: 20px;
+}
+
+.action-btn {
+  height: 40px;
+  font-size: 13px;
+  font-weight: 600;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: #fff;
+  background-color: rgb(148, 147, 147);
+  /* text-transform: uppercase; */
+}
+
+.liteblue-btn {
+  background-color: #d60062;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin: 0;
+}

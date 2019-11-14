@@ -1,0 +1,81 @@
+
+
+<div *ngIf="!showActionItems">
+  <img src="{{categoryImg}}" width="100%">
+</div>
+<div [ngClass]="{'container':!showActionItems}">
+  <div class="col-sm-12 mar-top-40" [ngClass]="{'mar-0':!showActionItems}">
+    <div class="col-sm-3" *ngIf="showActionItems">
+      <h3 class="lh-50">Products</h3>
+    </div>
+    <div class="col-sm-9 form-inline text-right" *ngIf="showActionItems">
+      <div class="form-group top-Select">
+        <label for="sel1">Select Category</label>
+        <select class="form-control" id="sel1" [(ngModel)]="category" #categoryId="ngModel" required (change)="getProductsOfCategory()">
+          <option value="">Select Category</option>
+          <option *ngFor="let cat of categories" value="{{cat._id}}">{{cat.categoryName}}</option>
+
+        </select>
+      </div>
+      <a routerLink="/admin/products/add" *ngIf="showActionItems">
+        <button class="btn btn-green">
+          Add Products
+        </button>
+      </a>
+    </div>
+    <div class="col-sm-12 mar-top-40" [ngClass]="{'mar-20':!showActionItems}">
+      <div class="row pro-list">
+        <div class="col-lg-4 col-sm-6 mar-top-10" *ngFor="let product of products">
+          <mat-card class="mat-box-shadow">
+            <div class="col-sm-12 pad-13 ht-50">
+              <span class="col-xs-6 pad-zero pro-name" title="{{product.productName}}">{{product.productName}}</span>
+              <span class="col-xs-6 pad-zero text-right" *ngIf="showActionItems">
+                <button mat-icon-button class="top-9" [matMenuTriggerFor]="menu">
+                  <mat-icon class="grey-color">more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                  <button mat-menu-item routerLink="/admin/products/edit/{{product._id}}">
+
+                    <span>
+                      <a>Edit</a>
+                    </span>
+                  </button>
+                  <button mat-menu-item (click)="deleteProducts(product._id)">
+                    <span>Delete</span>
+                  </button>
+
+                </mat-menu>
+              </span>
+
+            </div>
+            <a routerLink="/admin/products/details/{{product._id}}" class="col-sm-12 pad-zero" *ngIf="showActionItems">
+              <div class="img-pro">
+                <img src="{{product.imageUrl}}" width="100%;">
+              </div>
+            </a>
+            <a routerLink="/user/products/details/{{product._id}}" class="col-sm-12 pad-zero" *ngIf="!showActionItems">
+              <div class="img-pro">
+                <img src="{{product.imageUrl}}" width="100%;">
+              </div>
+            </a>
+            <div class="col-sm-12 pad-10 height-80">
+              <div class="block-with-text">
+                {{product.description}}
+              </div>
+            </div>
+            <div class="col-sm-12 pad-zero  products-approve-buttons" *ngIf="showActionItems">
+              <a routerLink="/admin/products/add-attribute/{{product._id}}">
+                <button class="btn action-btn green-btn">Add Attributes</button>
+              </a>
+              <button class="btn action-btn liteblue-btn" (click)="publish(product._id, product.attributeKey)" *ngIf="!product.publishProduct">Publish</button>
+              <button class="btn action-btn grey-btn" (click)="unPublish(product._id)" *ngIf="product.publishProduct">UnPublish</button>
+
+            </div>
+          </mat-card>
+        </div>
+      </div>
+    </div>    
+    <mat-paginator *ngIf="length>=5" [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" (page)="pageChangeEvent($event)">
+    </mat-paginator>
+  </div>
+</div>

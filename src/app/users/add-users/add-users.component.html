@@ -1,0 +1,141 @@
+<div class="add-categorie-main">
+  <div class="header">
+    <ul class="list-unstyled hil-category-heading">
+      <li class="list-items back-btn">
+        <a routerLink="/admin/users">
+          <i class="fa fa-angle-left" aria-hidden="true"></i>
+          <span>Back</span>
+        </a>
+      </li>
+      <li class="list-items">
+          <small *ngIf = "id">Edit User</small>
+        <small *ngIf = "!id">Add User</small>
+      </li>
+    </ul>
+  </div>
+  <div class="add-user-from">
+    <form [formGroup]="userForm" (ngSubmit)="addUser()">
+      <div class='example-container'>
+        <div *ngIf="!importData" class="">
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="row">
+                  <mat-form-field>
+                    <input matInput placeholder="First name" formControlName="firstName" required>
+
+                    <mat-error>{{getErrorMessage('firstName')}}</mat-error>
+                    <!-- <p *ngIf="errorMessage">Incorrect password</p> -->
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="row">
+                  <mat-form-field>
+                    <input matInput placeholder="Last name" formControlName="lastName" required>
+
+                    <mat-error>{{getErrorMessage('lastName')}}</mat-error>
+                    <!-- <p *ngIf="errorMessage">Incorrect password</p> -->
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="row">
+                  <mat-form-field>
+                    <input matInput placeholder="Email ID" formControlName="email" 
+                      name="email" required [readonly]="edit">
+
+                    <mat-error>{{getErrorMessage('email')}}</mat-error>
+                    <!-- <p *ngIf="errorMessage">Incorrect password</p> -->
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="row">
+                  <mat-form-field>
+                    <input matInput placeholder="Employee ID" maxlength ="10"  formControlName="employeeId" required>
+
+                    <mat-error>{{getErrorMessage('employeeId')}}</mat-error>
+                    <!-- <p *ngIf="errorMessage">Incorrect password</p> -->
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="row">
+                  <mat-form-field>
+                    <input type="text" minlength="10" maxlength="10" matInput placeholder="Phone Number"
+                      formControlName="phoneNumber"  (keypress)="keyPress($event)" required>
+
+                    <mat-error>{{getErrorMessage('phoneNumber')}}</mat-error>
+                    <!-- <p *ngIf="errorMessage">Incorrect password</p> -->
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="row">
+                  <mat-form-field>
+                    <input matInput placeholder="Password" formControlName="password" required [type]="showPassword ? 'text' : 'password'" >
+                    <span class="icon">
+                      <i [ngClass]="showPassword ? 'fa fa-eye' : 'fa fa-eye-slash'" aria-hidden="true"
+                          (click)="showHidePassword()"></i>
+                  </span>
+                    <mat-error>{{getErrorMessage('password')}}</mat-error>
+                    <!-- <p *ngIf="errorMessage">Incorrect password</p> -->
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf = "!id" class="users-import">
+        <div class="check-bulk">
+          <mat-checkbox (change)="onchange($event)"> Want to import users data from Excel? </mat-checkbox>
+        </div>
+        <small>To import users data in bulk you need to provide the data in a Excel file format.</small>
+
+      </div>
+      <div *ngIf="importData" class="import-csv-file">
+        <a><label for="csv" class="file-btn">Upload File</label></a>
+        <div>
+          <p *ngIf="templateFile" class="file-name">{{templateFile.name}}</p>
+        </div>
+        <input type="file" style="display: none;" accept=".xlsx, .xls, .csv" id="csv" (change)="fileSelected($event)"
+          required>
+          <p *ngIf="validate" class="error">Please choose file</p>
+        <div class="upload-check">
+          <!-- <ul class="list-unstyled">
+            <li class="list-items">
+              <mat-checkbox  (change)="onAppend($event)" [checked]="appendStatus" > Append </mat-checkbox>
+            </li>
+            <li class="list-items">
+              <mat-checkbox   (change)="onReplace($event)" [checked]="replaceStatus"> Replace </mat-checkbox>
+            </li>
+            <p *ngIf="!option" class="error">Please choose anyone option</p>
+          </ul> -->
+        </div>
+      </div>
+      <div class="submit-btns pull-right">
+        <ul class="list-items">
+          <li class="list-items">
+            <a class="btn btn-default  btn-cancel" (click)="cancelUser()">CANCEL</a>
+          </li>
+          <li class="list-items">
+              <a *ngIf = "importData && !id" class='btn btn-info btn-add' (click)="addUserDump()">ADD</a>
+            <a *ngIf = "!importData && !id" class='btn btn-info btn-add' (click)="addUser()">ADD</a>
+            <a *ngIf = "id" class='btn btn-info btn-add' (click)="updateUser()">Update</a>
+          </li>
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+    </form>
+  </div>
+
+</div>

@@ -1,0 +1,93 @@
+.main-sidenav {
+  background: #90004e;
+  height: 100%;
+
+}
+
+.nav-sidebar li a span {
+  color: #fff;
+}
+
+.nav-sidebar li .aa {
+
+  border-color: transparent;
+  font-size: 17px;
+  line-height: 50px;
+  padding: 0 0 0 30px;
+  margin: 1px;
+}
+
+.nav-sidebar li {
+  border-left: 4px solid;
+  border-color: #90004e;
+}
+
+.nav-sidebar li.selected,
+.nav-sidebar li:focus,
+.nav-sidebar li:hover {
+  background: #740140;
+
+  border-color: #aa2b70;
+
+  /* height: 100vh; */
+}
+
+.nav-sidebar > li > a:focus,
+.nav-sidebar > li > a:hover {
+  background-color: transparent;
+
+}
+
+.nav-sidebar li.selected .aa {
+  font-weight: bold;
+
+}
+
+.active {}
+
+.innerRoute {
+  display: none;
+  /* visibility: hidden; */
+  list-style: none;
+  background-color: #741440;
+
+}
+
+innerRoute li {
+  color: #fff;
+  line-height: 25px;
+}
+
+/* .routehovered ul.innerRoute {
+  display: none;
+} */
+
+/* .routeClicked ul.innerRoute,
+.selected ul.innerRoute {
+  display: block;
+
+} */
+.routehovered:hover ul.innerRoute {
+  display: block;
+  padding: 0;
+}
+
+ul.innerRoute li,
+ul.innerRoute li:hover {
+  color: #fff;
+  line-height: 30px;
+  padding-left: 40px;
+  border-left: 0;
+}
+
+ul.innerRoute li a {
+  color: #fff;
+  display: block;
+  line-height: 30px;
+
+}
+
+.selectedChild,
+ul.innerRoute li:hover {
+  background-color: #aa2b70;
+}

@@ -1,0 +1,67 @@
+<div class="users-main">
+  <div class="heading">
+    <ul class="list-unstyled">
+      <li class="list-items">
+        <span><b>Users list</b></span>
+      </li>
+      <li class="list-items pull-right">
+        <ul class="list-unstyled">
+          <li class="search-li">
+            <p class="">
+              <input type="text" class="search" [(ngModel)]="searchKey" (ngModelChange)="applyFilter()" 
+                placeholder="Search">
+            </p>
+          </li>
+          <li class="add-user-btn">
+            <a routerLink='./add' class="btn btn-info btn-add">Add User</a>
+          </li>
+        </ul>
+      </li>
+      <div class="clearfix"></div>
+    </ul>
+  </div>
+  <div class="users-tables">
+    <table>
+      <thead>
+        <th>Employee Name</th>
+        <th>Email</th>
+        <th>Employee ID</th>
+        <th>Phone No</th>
+        <th> </th>
+      </thead>
+      <tbody>
+        <hr>
+        <tr class="top" *ngFor="let data of usersData">
+
+          <td>{{data.firstName}}&nbsp;{{data.lastName}}</td>
+          <td>{{data.email}}</td>
+          <td>{{data.employeeId}}</td>
+          <td>{{data.phoneNumber}}</td>
+          <td>
+            <ul class="list-unstyled edit-delete-icons">
+              <li class="list-items">
+                <i (click)="editUser(data._id)" class="material-icons">
+                  border_color
+                </i>
+              </li>
+              <li class="list-items">
+                <i (click)="deleteUser(data._id)" class="material-icons">
+                  delete
+                </i>
+              </li>
+            </ul>
+
+          </td>
+
+        </tr>
+
+
+
+
+      </tbody>
+    </table>
+    <mat-paginator [length]="count" [pageSize]='perPage.size' [pageSizeOptions]="pageSizeOptions" (page)="pageEvents($event)">
+   
+    </mat-paginator>
+  </div>
+</div>

@@ -1,0 +1,90 @@
+<!-- <div>
+  <app-navbar></app-navbar>
+</div>
+<div class="">
+  <div class="sidenav-content">
+    
+      <app-side-nav></app-side-nav>
+    
+  </div>
+  <div class="main-content">
+    
+      <router-outlet></router-outlet>
+    
+  </div>
+</div> -->
+
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+  <mat-toolbar class="example-toolbar">
+    <!-- <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="example-app-name">Responsive App</h1> -->
+    <div class="container-fluid main-header">
+
+      <nav class="navbar hil-navbar">
+
+        <div class="navbar-header">
+          <a class="navbar-brand">
+            <img alt="Brand-logo" src="./../../assets/ckbirla-logo.png">
+
+          </a>
+          <a class="lh-50" (click)="snav.toggle()" #startClick>
+            <mat-icon class="toggle-class">menu</mat-icon>
+          </a>
+          <div class="clearfix"></div>
+        </div>
+        <span class="admin-name" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+
+          <ul class="list-unstyled">
+            <li class="list=items">
+              <i class="fa fa-user-circle-o user-image" aria-hidden="true"></i>
+            </li>
+            <li class="list=items">
+              <span>{{empName}}</span>
+            </li>
+            <li class="list-items">
+              <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </li>
+          </ul>
+
+        </span>
+        <ul class="dropdown-menu drop-down-steps" aria-labelledby="dropdownMenu1">
+          <li>
+            <a class="hil-edit" routerLink="profile/{{userId}}">Profile</a>
+          </li>
+          <li>
+            <a class="hil-delete" (click)="logout()">Logout</a>
+          </li>
+
+        </ul>
+
+      </nav>
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+      <!-- <mat-nav-list>
+        <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a>
+      </mat-nav-list> -->
+      <app-side-nav></app-side-nav>
+    </mat-sidenav>
+
+    <mat-sidenav-content [ngClass]="{'holdScroll':loadingbarService.showLoading}">
+      <router-outlet></router-outlet>
+      <div class="loadbar" *ngIf="loadingbarService.showLoading">
+        <div id="circularG" class="load">
+          <div id="circularG_1" class="circularG"></div>
+          <div id="circularG_2" class="circularG"></div>
+          <div id="circularG_3" class="circularG"></div>
+          <div id="circularG_4" class="circularG"></div>
+          <div id="circularG_5" class="circularG"></div>
+          <div id="circularG_6" class="circularG"></div>
+          <div id="circularG_7" class="circularG"></div>
+          <div id="circularG_8" class="circularG"></div>
+        </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

@@ -1,0 +1,35 @@
+<div class="container-fluid login-bg">
+  <div class="login-form">
+
+    <div class="hil-logo">
+      <img src="./../../../assets/ckbirla-logo.png">
+    </div>
+    <p>Knowledge Portal</p>
+    <!-- <h2 class="login-header">Login</h2> -->
+    <form [formGroup]="loginForm">
+      <div class="example-container">
+        <mat-form-field>
+
+          <input matInput placeholder="Email" formControlName="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+            name="email" required>
+          <mat-error>{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Password" formControlName="password" required [type]="hide ? 'password' : 'text'">
+
+          <mat-error>{{getErrorMessage2()}}</mat-error>
+          <!-- <p *ngIf="errorMessage">Incorrect password</p> -->
+        </mat-form-field>
+        <div class="forgot-password">
+          <a routerLink='./forgot-password'>Forgot Password?</a>
+        </div>
+      </div>
+
+      <!-- <a routerLink = '/audits'> -->
+      <a class="disable">
+        <button type="submit" class="login-btn" (click)="loginSubmit()">LOGIN</button>
+      </a>
+    </form>
+
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="main-success">
+    <div class="success-text text-center">
+      <h3 *ngIf="status == 'added'"class="success-message">user details has been successfully {{status}}.</h3>
+      <h3 *ngIf="status == 'updated'" class="success-message">user details has been successfully {{status}}.</h3>
+      <h3 *ngIf="status == 'users'" class="success-message">users data has been successfully added</h3>
+      <ul class="list-unstyled success-btns">
+        <li class="list-items">
+          <a routerLink= "/admin/users" class="btn btn-default btn-category-list"> View Users List</a>
+  
+        </li>
+        <li class="list-items">
+          <a routerLink= "/admin/users/add" class="btn btn-info btn-add-list"> Add more users </a>
+        </li>
+      </ul>
+    </div>
+  </div>

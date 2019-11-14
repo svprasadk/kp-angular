@@ -1,0 +1,73 @@
+<div class="col-sm-12 mar-top-40">
+  <div class="col-sm-12">
+
+    <h4 class="lh-50 dis-in-b">{{id ? 'Add About Us' : 'Edit About Us'}}</h4>
+  </div>
+
+  <div class="col-sm-12">
+    <form #f="ngForm" novalidate>
+
+
+      <div class="form-group pro-title">
+        <label>Heading*
+          <span class="suggestion">(Heading can be at most 25 characters)</span>
+        </label>
+        <input type="text" class="form-control" [(ngModel)]="heading" name="heading" #head="ngModel" required>
+        <p class="error" *ngIf="!head.valid && head.touched || !head.valid && submitted">Heading is required</p>
+
+      </div>
+
+      <div class=" mar-top-20 pro-title">
+        <label>Description</label>
+        <quill-editor [(ngModel)]="description" name="description" [style]="{'height': '200px'}" name="description" #disc="ngModel"
+          required>
+          <div quill-editor-toolbar>
+            <span class="ql-formats">
+              <select class="ql-font">
+                <option selected></option>
+                <option value="serif"></option>
+                <option value="monospace"></option>
+              </select>
+              <select class="ql-size">
+                <option value="small"></option>
+                <option selected></option>
+                <option value="large"></option>
+                <option value="huge"></option>
+              </select>
+            </span>
+            <span class="ql-formats">
+              <button class="ql-bold"></button>
+              <button class="ql-italic"></button>
+              <button class="ql-underline"></button>
+              <button class="ql-strike"></button>
+            </span>
+            <span class="ql-formats">
+              <select class="ql-color"></select>
+              <select class="ql-background"></select>
+            </span>
+            <span class="ql-formats">
+              <button class="ql-list" value="ordered"></button>
+              <button class="ql-list" value="bullet"></button>
+              <select class="ql-align">
+                <option selected></option>
+                <option value="center"></option>
+                <option value="right"></option>
+                <option value="justify"></option>
+              </select>
+            </span>
+            <span class="ql-formats">
+              <button class="ql-link"></button>
+            </span>
+          </div>
+        </quill-editor>
+        <p class="error" *ngIf="!disc.valid && disc.touched || !disc.valid && submitted">Description is required</p>
+
+      </div>
+      <div class="text-right mar-top-40">
+        <button class="btn action-btn cancell-btn" (click)="cancel()">CANCEL</button>
+        <button type="submit" class="btn action-btn liteblue-btn" (click)="onSubmit()">{{id ? 'SAVE' : 'SUBMIT'}}</button>
+
+      </div>
+    </form>
+  </div>
+</div>

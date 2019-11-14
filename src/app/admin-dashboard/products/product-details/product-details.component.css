@@ -1,0 +1,82 @@
+.back-btn,
+.back-btn:focus {
+  height: 45px;
+  border: 1px solid rgb(94, 94, 94);
+  color: rgb(94, 94, 94);
+  border-radius: 0;
+  background-color: #fff;
+  padding: 0 21px 0 10px;
+}
+
+h4 {
+  font-weight: 600;
+}
+.color-theme{
+  cursor: pointer;
+  line-height: 22px;
+  vertical-align: middle;
+}
+span.arow_icon{
+  width: 20px;
+  float: left;
+  text-align: center;
+  font-size: 19px;
+  line-height: 22px;
+  vertical-align: middle;
+}
+.icon-pos {
+  position: relative;
+  top: 4px;
+  color: rgb(94, 94, 94);
+
+}
+
+.mar-l-20 {
+  margin-left: 20px;
+}
+
+.text-color-grey {
+  color: rgb(94, 94, 94);
+
+}
+
+.back-class {
+  font-size: 16px;
+  position: relative;
+  top: -3px;
+}
+
+.dis-in-b {
+  display: inline-block;
+}
+
+.right-30 {
+  position: absolute;
+  right: 50px;
+  color: rgb(94, 94, 94);
+  cursor: pointer;
+}
+
+.right-0 {
+  position: absolute;
+  right: 15px;
+  color: rgb(94, 94, 94);
+  cursor: pointer;
+}
+
+.mat-expansion-panel {
+  margin: 16px 0;
+}
+
+::ng-deep .mat-expansion-panel-body {
+  width: 100% !important;
+}
+
+.pad-tb-5 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.color-theme {
+  color: #d60062;
+}

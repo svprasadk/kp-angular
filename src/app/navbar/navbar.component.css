@@ -1,0 +1,31 @@
+.main-header{
+    padding: 0px;
+}
+.hil-navbar{
+
+    box-shadow: 2px 0.5px 5px 1px rgba(0,0,0,0.4) !important;
+    margin: 0px !important;
+}
+.hil-navbar .navbar-brand{
+    height: auto !important;
+   
+   
+}
+
+
+.admini-name{
+    float: right;
+    height: auto;
+    padding: 15px 15px;
+    font-size: 16px;
+    margin-top: 10px;
+    line-height: 20px;
+    color: #7d7d7d;
+}
+.admini-name ul li{
+    display: inline-block;
+    padding: 0px 10px 0 0;
+}
+.user-image{
+    font-size: 18px;
+}

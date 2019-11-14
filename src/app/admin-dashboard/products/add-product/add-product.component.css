@@ -1,0 +1,202 @@
+.back-btn,
+.back-btn:focus {
+  height: 45px;
+  border: 1px solid rgb(94, 94, 94);
+  color: rgb(94, 94, 94);
+  border-radius: 0;
+  background-color: #fff;
+  padding: 0 21px 0 10px;
+}
+.tag_label{
+  width: 100%;
+  float: left;
+  padding: 10px 0px 10px 15px;
+  margin: 0%;
+  color:#939393;
+  font-weight: 700;
+  font-size: 16px;
+}
+.tag_label.two{
+  padding: 20px 0px 0px 0px !important;
+}
+h4 {
+  font-weight: 600;
+}
+
+.icon-pos {
+  position: relative;
+  top: 4px;
+  color: rgb(94, 94, 94);
+
+}
+
+.mar-l-20 {
+  margin-left: 20px;
+}
+
+.text-color-grey {
+  color: rgb(94, 94, 94);
+
+}
+
+.back-class {
+  font-size: 16px;
+  position: relative;
+  top: -3px;
+}
+
+.dis-in-b {
+  display: inline-block;
+}
+
+.Aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mar-top-40 {
+  margin-top: 40px;
+}
+
+.Aligner-item {
+  max-width: 100%;
+  width: 100%;
+
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.lh-50 {
+  margin: 0 !important;
+  line-height: 50px;
+}
+
+.pad-zero {
+  padding: 0;
+}
+
+.top-Select .form-control,
+.top-Select .form-control:focus {
+  border-radius: 0;
+  width: 200px;
+  border-color: #333;
+  color: #333;
+  font-size: 16px;
+  height: 50px;
+  outline: none;
+}
+
+.pro-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #797979;
+  margin-bottom: 0;
+}
+
+.pro-title .form-control,
+.pro-title .form-control:focus {
+  border-radius: 0;
+  border: 1px solid #333 !important;
+  color: #333;
+  font-size: 16px;
+  height: 50px;
+  outline: none;
+  box-shadow: none;
+}
+
+.ht-20-w {
+  height: 18vw;
+  border: 1px dashed rgb(136, 136, 136);
+}
+
+.upload-icon {
+  font-size: 35px;
+  color: rgb(136, 136, 136);
+}
+
+.ht-20-w p {
+  color: rgb(136, 136, 136);
+  font-size: 16px;
+}
+
+.ht-15vw {
+  height: 18vw;
+  border: 1px solid rgb(136, 136, 136);
+  border-radius: 0;
+}
+
+.pd-r-0 {
+  padding-right: 0;
+}
+
+.action-btn {
+  height: 40px;
+  font-size: 13px;
+  font-weight: 600;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: #fff;
+  background-color: rgb(148, 147, 147);
+  /* text-transform: uppercase; */
+}
+
+.liteblue-btn {
+  background-color: #d60062;
+}
+
+.clr-green {
+  color: #5dc248;
+  margin-bottom: 45px;
+}
+
+.cancell-btn {
+  margin-right: 30px;
+}
+
+#file {
+  visibility: hidden;
+  display: none;
+}
+
+#file2{
+  visibility: hidden;
+  display: none;
+}
+
+.ht-95 {
+  height: 95vh;
+}
+.margin-top-10{
+  margin-top:10px;
+}
+
+.vpl {
+  font-size: 16px;
+  height: 50px;
+  margin: 20px;
+}
+
+.err-div {
+  height: 18px;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* .disBlc {
+  display: none;
+  position: absolute;
+  top: 30%;
+
+  color: #fff;
+
+}
+
+.Aligner-item:hover .disBlc {
+  display: block;
+} */

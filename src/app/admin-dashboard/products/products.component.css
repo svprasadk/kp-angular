@@ -1,0 +1,197 @@
+.top-Select .form-control,
+.top-Select .form-control:focus {
+  border-radius: 0;
+  width: 200px;
+  border-color: #333;
+  color: #333;
+  font-size: 16px;
+  height: 50px;
+  outline: none;
+}
+
+.btn-green {
+  height: 50px;
+  font-weight: 600;
+  font-size: 16px;
+  /* margin-left: 30px; */
+  border-radius: 0;
+  background-color: #21a73f;
+  color: #fff;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.lh-50 {
+  margin: 0 !important;
+  line-height: 50px;
+}
+
+.mar-top-40 {
+  margin-top: 40px;
+}
+
+.mar-0 {
+  margin-top: 0 !important;
+}
+
+.mar-20 {
+  margin-top: 20px !important;
+
+}
+
+.pro-list .mat-card {
+  padding: 10px 20px;
+  display: inline-block;
+  width: 100%;
+}
+
+.ht-50 {
+  height: 50px;
+}
+
+.pad-zero {
+  padding: 0;
+}
+
+.lh-40 {
+  line-height: 40px;
+}
+
+.img-pro {
+  width: 100%;
+  /* background-color: gray; */
+  /* height: 200px; */
+  /* height: 11vw; */
+  overflow: hidden;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.img-pro img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.action-btn {
+  height: 40px;
+  font-size: 13px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.green-btn {
+  background-color: #21a73f;
+}
+
+.liteblue-btn {
+  background-color: #d60062;
+}
+
+.grey-btn {
+  background-color: #474747;
+}
+
+.mar-top-20 {
+  margin-top: 20px;
+}
+
+.grey-color {
+  color: #a7a7a7;
+  font-size: 35px;
+  width: 100%;
+  float: left;
+}
+.pro-name {
+  color: #737373;
+  font-size: 16px;
+  font-weight: 400;
+  width: 260px;
+  float: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.pad-zero.text-right{
+  width: 20px;
+  float: right;
+}
+
+
+/* styles for '...' */
+.block-with-text {
+  margin-top: 5px;
+  font-size: 14px;
+  /* hide text if it more than N lines  */
+  overflow: hidden;
+  /* for set '...' in absolute position */
+  position: relative;
+  /* use this value to count block height */
+  line-height: 1.25em;
+  /* max-height = line-height (1.2) * lines max number (3) */
+  max-height: 3.6em;
+  /* fix problem when last visible word doesn't adjoin right side  */
+  text-align: justify;
+  /* place for '...' */
+  /* margin-right: -1em; */
+  padding-right: 1em;
+}
+/* create the ... */
+.block-with-text:before {
+  /* points in the end */
+  content: '...';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of block */
+  right: 0;
+  bottom: 0;
+}
+/* hide ... if we have text, which is less than or equal to max lines */
+.block-with-text:after {
+  /* points in the end */
+  content: '';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of text */
+  right: 0;
+  /* set width and height */
+  width: 1em;
+  height: 1em;
+  /* margin-top: .2em; */
+  /* bg color = bg color under block */
+  background: white;
+}
+
+.height-80 {
+  height: 80px;
+}
+
+.mar-top-10 {
+  margin-top: 10px;
+}
+
+.mat-box-shadow {
+  padding: 0 !important;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.47)!important;
+  -moz-box-shadow: 0 0 5px 0 rgba(0,0,0,0.47)!important;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.47)!important;
+}
+
+.pad-10 {
+  padding: 10px;
+}
+
+.pad-13 {
+  padding: 13px;
+}
+
+.products-approve-buttons {
+  margin-top: 5px;
+  padding-bottom: 14px;
+  padding-right: 10px;
+  text-align: right;
+}
+
+.top-9 {
+  top: -9px;
+}

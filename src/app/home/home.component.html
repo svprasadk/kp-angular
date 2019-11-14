@@ -1,0 +1,16 @@
+<div>
+  <img src="../../assets/KnowledgePortal_banner.png" width="100%">
+</div>
+<div class="container pad-20-tb">
+  <div class="row" *ngFor="let about of aboutUs">
+
+    <h3 class="home-head-color">
+      {{about.heading}}
+    </h3>
+    <div class="text-description">
+      <div [innerHTML]="about.description"></div>
+    </div>
+
+
+  </div>
+</div>

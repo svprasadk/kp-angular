@@ -1,0 +1,112 @@
+.add-categorie-main{
+    padding: 40px 100px 0 50px;
+}
+.header{
+    padding: 0 0 20px;
+}
+.hil-category-heading .list-items{ 
+    display: inline-block;
+    padding: 0px 10px;
+}
+.back-btn{
+    border: 1px solid #ededed;
+    padding: 4px 4px !important;
+    cursor: pointer;
+}
+.back-btn i{
+    padding: 0px 5px;
+}
+.back-btn span{
+    padding: 0 7px 0 0;
+    font-size: 12px;
+}
+.list-items small{
+    color: #939393;
+}
+.category-name label{
+    display: block;
+    color: #939393;
+}
+.category-input{
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #939393;
+}
+.banner-img{
+    margin: 20px 0 0 0;
+    border: 1px dashed #939393;
+    height: 200px;
+    text-align: center;
+    display: table;
+    width: 100%;
+}
+.mobile-banner-img{
+    margin: 20px 0 0 0;
+    border: 1px dashed #939393;
+    height: 150px;
+    text-align: center;
+    display: table;
+    width: 50%;
+}
+.img-sample{
+    height: auto;
+}
+.upload-img{
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.upload-img ul li .size-img{
+    padding: 10px;
+}
+.upload-img ul li i{
+    font-size: 40px;
+    color: #939393;
+}
+.upload-img ul li span{
+    font-size: 20px;
+    color: #939393;
+}
+.upload-img ul li small{
+    font-size: 14px;
+}
+.save-btns{
+    margin: 20px 0 0 0;
+}
+.save-btns ul li{
+    display: inline-block;
+    padding: 0px 0 0 10px;
+}
+.btn-cancel{
+    background: #c5c5c5;
+    border-radius: 0;
+    color: #fff;
+    font-size: 12px;
+    width: 70px;
+}
+.btn-add{
+    border-radius:0;
+    font-size: 12px;
+    width: 70px;
+    background: #d84563;
+    border-color: #d84563;
+}
+.btn-add:visited,.btn-add:active,.btn-add:hover{
+    background: #d84563;
+    border-color: #d84563;
+}
+.error{
+    font-size:12px;
+    color: #f44336;
+}
+.tag_label{
+    width: 100%;
+    float: left;
+    padding: 10px 0px;
+    margin: 0%;
+    color:#939393;
+    font-weight: 700;
+}

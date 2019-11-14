@@ -1,0 +1,163 @@
+<!-- <button (click)="topFunction()" id="myBtn" title="Go to top">
+  <i class="material-icons">
+    arrow_upward
+  </i>
+</button> -->
+<div class="min-height-100">
+  <div class="header" #top>
+    <!-- <div class="top-nav">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col-sm-10 pad-5px">
+          <div class="col-sm-4 ">
+
+            <div class="input-group add-on">
+              <input placeholder="Search here.." class="form-control form-text" autocomplete="off" type="text" matInput [formControl]="myControl"
+                [matAutocomplete]="auto">
+              <div class="input-group-btn vertical-align-bottom">
+                <button class="btn btn-default buttonsearch">
+                  <i class="glyphicon glyphicon-search"></i>
+                </button>
+              </div>
+              <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                  {{ option }}
+                </mat-option>
+                <mat-option *ngIf="!filteredOptions.length">No Results!</mat-option>
+              </mat-autocomplete>
+            </div>
+
+
+          </div>
+          <div class="col-sm-8">
+
+            <ul class="top-right-menu">
+              <li routerLinkActive="selected-top">
+                <a class="rout" routerLink="/ask-expert">Ask the Expert</a>
+
+              </li>
+              <li routerLinkActive="selected-top">
+                <a class="rout" routerLink="/feedback">Feedback</a>
+              </li>
+              <li routerLinkActive="selected-top">
+                <a class="rout" (click)="onLogout()">Logout </a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+    <div class="logos">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="row">
+              <img src="../../assets/iPhone 6-7-8 – 1 (1).png">
+
+            </div>
+
+          </div>
+          <div class="col-xs-6 text-right">
+            <div class="row">
+              <img src="../../assets/birla-aerocon.png">
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-menu-header">
+      <div class="container">
+        <div class="row">
+          <ul class="menu-main-ul">
+            <li routerLinkActive="selected">
+              <a class="routes" routerLink="/user/home">Home</a>
+
+            </li>
+            <li class="dropdown" routerLinkActive="selected" *ngFor="let category of categories">
+              <a class="routes dropbtn" routerLink="/user/products/{{category._id}}">{{category.categoryName}}</a>
+
+
+              <div class="dropdown-content">
+                <ul class="menu-main-ul">
+                  <li class="dropdown-li" *ngFor=" let product of category.products" routerLinkActive="selected">
+                    <a style="width: 250px" routerLink="/user/products/details/{{product._id}}">{{product.productName}}</a>
+                  </li>
+
+                </ul>
+              </div>
+            </li>
+            <li routerLinkActive="selected">
+              <a class="routes" routerLink="/user/testimonials">Testimonials</a>
+            </li>
+            <li routerLinkActive="selected">
+              <a class="routes" routerLink="/user/asktheexpert">Ask the Expert</a>
+            </li>
+            <li routerLinkActive="selected">
+                <a class="routes" routerLink="/user/feedback">Feedback</a>
+              </li>
+            <li class="pull-right">
+                <!-- <span class="admin-name" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+
+                    <ul class="list-unstyled">
+                      <li class="list-items">
+                        <i class="fa fa-user-circle-o user-image" aria-hidden="true"></i>
+                      </li>
+                      <li class="list-items">
+                        <span>{{empName}}</span>
+                      </li>
+                      <li class="list-items">
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                      </li>
+                    </ul>
+          
+                  </span>
+              <ul class="dropdown-menu drop-down-steps" aria-labelledby="dropdownMenu1">
+                <li>
+                  <a class="hil-edit" routerLink="profile/{{userId}}">Profile</a>
+                </li>
+                <li>
+                  <a class="hil-delete" (click)="logout()">Logout</a>
+                </li>
+      
+              </ul> -->
+              <button mat-button class="menu-setup" [matMenuTriggerFor]="menu">{{empName}}
+                  <i class="material-icons">
+                      arrow_drop_down
+                      </i>
+              </button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item routerLink="profile/{{userId}}">Profile</button>
+                <button mat-menu-item  (click)="onLogout()">Logout</button>
+              </mat-menu>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pagesclass " id="body">
+    <div class="min-height-85vh">
+      <router-outlet></router-outlet>
+
+    </div>
+
+  </div>
+
+
+  <div class="footer " id="footer1">
+    <div class="container ">
+      <div class="row ">
+        <p class="text-center margin-bottom-zero">© ALL RIGHTS RESERVED. BIRLA AEROCON KNOWLEDGE PORTAL</p>
+      </div>
+    </div>
+  </div>
+</div>

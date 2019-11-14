@@ -1,0 +1,30 @@
+.main-success{
+    display: table;
+    width: 85%;
+    margin: 75px;
+}
+.success-text{
+    background: #f5f5f5;
+    /* padding: 50px; */
+    display: table-cell;
+    height: 360px;
+    /* width: 100%; */
+    vertical-align: middle;
+}
+.success-btns{
+    margin: 20px 0 0 0;
+}
+.success-btns li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+.btn-category-list,.btn-category-list:active,.btn-category-list:visited,.btn-category-list:hover{
+    background: #656565;
+    border-color:  #656565;
+    color: #fff;
+}
+.btn-add-list,.btn-add-list:active,.btn-add-list:visited,.btn-add-list:hover{
+    background: #d84563;
+    color: #fff;
+    border-color: #d84563;
+}

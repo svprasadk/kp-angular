@@ -1,0 +1,59 @@
+.home-head-color {
+  color: #aa2b70;
+  margin-bottom: 20px;
+}
+
+.pad-l-15 {
+  padding-left: 15px;
+  margin-top: 20px;
+
+}
+
+.text-colour-grey {
+  color: #575656;
+  font-weight: 600;
+}
+
+.listpoints li {
+  padding: 4px 0;
+}
+ul{
+  width: 32%;
+    float: left;
+    text-align: center;
+    
+    margin: 0 0 20px 0px;
+    list-style-type: none;
+    
+}
+ul li{
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0px;
+  /* border: 1px solid #575656;
+  border-bottom: 0px transparent; */
+}
+/* ul li:last-child{
+  border-bottom: 1px solid #575656;
+} */
+.num{
+  width: 10%;
+    float: left;
+    text-align: right;
+    font-size: 16px;
+    padding: 8px;
+   
+}
+.image{
+  width: 80%;
+    text-align: left;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px;
+}
+.image:hover{
+  text-decoration: underline !important;
+}

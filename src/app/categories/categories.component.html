@@ -1,0 +1,45 @@
+<div class="categories-main">
+  <div class="heading" *ngIf="showActionItems">
+    <b class="categiry-title pull-left">Categories</b>
+    <a routerLink='./add' class="btn btn-category pull-right">Add Category</a>
+    <div class="clearfix"></div>
+  </div>
+  <div class="categorie-list">
+    <div class="categorie-main col-sm-12">
+      <div class="row">
+        <div *ngFor="let data of categories; let i=index;" class="col-sm-6 single-category">
+          <!-- <div class="row"> -->
+          <a routerLink="/admin/products/{{data._id}}">
+            <img src={{data.imageUrl}} class="category-image" alt="category-image">
+
+          </a>
+          <span class="edit-icon dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
+            *ngIf="showActionItems">
+            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+          </span>
+          <ul class="dropdown-menu drop-down-steps" aria-labelledby="dropdownMenu1">
+            <li>
+              <a class="hil-edit" (click)="editCategory(data._id)">Edit</a>
+            </li>
+            <li>
+              <a class="hil-delete" (click)="deleteCategory(data._id)">Delete</a>
+            </li>
+
+          </ul>
+          <div class="category-bottom">
+            <div class='category-detail'>
+              <span>{{data.categoryName}}</span>
+              <a *ngIf="data.publishCategory == false && showActionItems" class='btn btn-info pull-right btn-publish' (click)="publish(i,data._id)">PUBLISH</a>
+              <a *ngIf="data.publishCategory == true && showActionItems" class='btn btn-info pull-right btn-unpublish' (click)="unPublish(i,data._id)">UNPUBLISH</a>
+              <div class="clearfix"></div>
+            </div>
+
+            <!-- </div> -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>

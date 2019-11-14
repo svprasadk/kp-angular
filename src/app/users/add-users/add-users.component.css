@@ -1,0 +1,76 @@
+.add-categorie-main{
+    padding: 40px 100px 0 50px;
+}
+.header{
+    padding: 0 0 20px;
+}
+.hil-category-heading .list-items{ 
+    display: inline-block;
+    padding: 0px 10px;
+}
+.back-btn{
+    border: 1px solid #ededed;
+    padding: 4px 4px !important;
+    cursor: pointer;
+}
+.check-bulk small{
+    font-size: 13px;
+}
+.back-btn i{
+    padding: 0px 5px;
+}
+.back-btn span{
+    padding: 0 7px 0 0;
+    font-size: 12px;
+}
+.list-items small{
+    color: #939393;
+}
+
+.users-import ul li, .submit-btns ul li{
+    display: inline-block;
+    padding: 0px 10px;
+}
+.file-btn{
+    color: black;
+    border: 1px solid #e6e6e6;
+    background-color: #e6e6e6;
+    padding: 10px 10px;
+    font-weight: lighter;
+    cursor: pointer;
+    margin: 30px 0 0 0;
+}
+.upload-check{
+    margin: 20px 0 0 0;
+}
+.upload-check ul li{
+    display: inline-block;
+    padding: 0px 15px 0px 0px;
+}
+.btn-add,.btn-add:active,.btn-add:visited,.btn-add:hover{
+    background: #d84561;
+    border-color: #d84561;
+    border-radius: 0;
+    /* padding: 4px 12px; */
+}
+.btn-cancel,.btn-cancel:active,.btn-cancel:visited,.btn-cancelhover{
+    background: #c5c5c5;
+    border-radius: 0;
+    color: #fff;
+    font-size: 12px;
+    width: 70px;
+}
+.error{
+    font-size:12px;
+    color: #f44336;
+}
+.icon{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+}
+.icon i{
+font-size: 14px;
+color: grey;
+}

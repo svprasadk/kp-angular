@@ -1,0 +1,44 @@
+<div class="main-sidenav">
+  <ul class="nav nav-sidebar">
+    <!-- <li routerLinkActive="selected">
+      <a routerLink="/admin/dashboard">
+        <span> Dashboard</span>
+      </a>
+    </li> -->
+    <li routerLinkActive="selected">
+      <a class="aa" routerLink="/admin/categories">
+        <span> Category Management</span>
+      </a>
+    </li>
+    <li routerLinkActive="selected">
+      <a class="aa" routerLink="/admin/products">
+        <span> Catalog Management</span>
+      </a>
+    </li>
+    <li routerLinkActive="selected" *ngIf="showActionItems">
+      <a class="aa" routerLink="/admin/users">
+        <span> Users Management</span>
+      </a>
+    </li>
+    <li routerLinkActive="selected">
+      <a class="aa" routerLink="/admin/about">
+        <span> About Us</span>
+      </a>
+    </li>
+
+    <!-- <li routerLinkActive="selected" class="routehovered" *ngFor="let category of categories; let i=index;" [ngClass]="{'routeClicked':routeOnId==category._id}"
+      (click)="roteOn(category._id)">
+     
+      <a class="aa">
+        <span> {{category.categoryName}}</span>
+      </a>
+      <ul class="innerRoute">
+        <li *ngFor="let product of category.products" routerLinkActive="selectedChild">
+          <a routerLink="/admin/products/details/{{product._id}}">
+            {{product.productName}}
+          </a>
+        </li>
+      </ul>
+    </li> -->
+  </ul>
+</div>

@@ -1,0 +1,45 @@
+.home-head-color {
+  color: #aa2b70;
+  margin-bottom: 20px;
+}
+
+.text-description {
+  line-height: 28px;
+  margin-bottom: 40px;
+
+}
+
+.text-description a {
+  color: #f99d1c !important;
+}
+
+.color-icon {
+  color: #333;
+}
+
+.action-btn {
+  height: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: #fff;
+  background-color: rgb(148, 147, 147);
+  /* text-transform: uppercase; */
+}
+
+.liteblue-btn {
+  background-color: #d60062;
+}
+
+.mar-top-40 {
+  margin-top: 40px;
+}
+
+.lh-40 {
+  line-height: 40px;
+}
+
+.cursorpointer {
+  cursor: pointer;
+}

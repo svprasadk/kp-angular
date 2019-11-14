@@ -1,0 +1,58 @@
+.users-main{
+    padding: 20px;
+}
+.heading ul li{
+    display: inline-block;
+    /* padding: 0px 10px; */
+}
+.heading ul li b{
+    font-size: 18px;
+}
+.search{
+    height: 33px;
+    padding: 0px 10px;
+    border: 1px solid #ededed;
+}
+.search-li{
+    padding: 0 15px 0 0;
+}
+.btn-add,.btn-add:active,.btn-add:visited,.btn-add:hover{
+    background: #d84561;
+    border-color: #d84561;
+    border-radius: 0;
+    padding: 4px 12px;
+}
+.users-tables{
+    margin: 10px 0 0 0;
+}
+.users-tables table{
+    width: 100%;
+}
+.users-tables table thead {
+    background: #f1f1f1;
+}
+.users-tables table thead th{
+    padding: 10px 35px;
+    width: 20%;
+}
+.users-tables table tbody tr{
+    border: 1px solid #ededec;
+}
+.users-tables table tbody tr td{
+    padding: 10px 35px;
+    width: 20%;
+}
+
+hr{
+    margin-top: 6px;
+    margin-bottom: 6px;
+    border-top:none;
+}
+.edit-delete-icons li{
+    display: inline-block;
+    padding: 0 10px 0 0;
+}
+.edit-delete-icons li i{
+    font-size: 18px;
+    cursor: pointer;
+}

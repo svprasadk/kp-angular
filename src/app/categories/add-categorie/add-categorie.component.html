@@ -1,0 +1,98 @@
+<div class="add-categorie-main">
+  <div class="header">
+    <ul class="list-unstyled hil-category-heading">
+      <li class="list-items back-btn">
+        <a routerLink = "/admin/categories" >
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+        <span>Back</span>
+        </a>
+      </li>
+      <li class="list-items">
+        <small  *ngIf = "id" >Edit Category</small>
+        <small  *ngIf = "!id" >Add Category</small>
+
+      </li>
+    </ul>
+  </div>
+  <div class="category-name">
+    <label>Category Name</label>
+    <input type="text" class="category-input" [(ngModel)]="category.categoryName"   name="categoryName" #categoryName="ngModel" required>
+    <p *ngIf="!category.categoryName && categoryName.touched  || (!category.categoryName && isInputCategory)"
+    class="error">Please choose this field</p>
+    <div *ngIf='category.categoryName.length > 40 &&(categoryName.dirty || categoryName.touched)' class="error">Category name contain upto 40 characters, If you have been using a category name that has more than 40 characters, enter the first 40</div>
+  </div>
+  <p class="tag_label">Web Banner Image ( 1300 x 400 px )</p>
+  <div class="banner-img" [ngClass]="{'img-sample' : url}">
+    
+    <input type="file" id="gallery"style="display: none"  accept="image/*" (change)="onSelectFile($event)"    >
+    <label for="gallery"  class="upload-img">
+
+        <img *ngIf = "url" [src]="url" style="width: 100%;">
+
+      <ul *ngIf = "!url" class="list-unstyled">
+        <li class="list-items">
+          <i class="material-icons">
+            cloud_upload
+          </i>
+        </li>
+        <li class="list-items">
+          <span>Upload Banner Image</span>
+        </li>
+        <li class="list-items size-img">
+          <small>1300x400px</small>
+        </li>
+      </ul>
+    </label>
+    
+  </div>
+   <p *ngIf = "width != '1300' || height != '400'" class="error">Invalid image size.Please upload image with specific size(1300 x 400 px)</p>
+   <p *ngIf = "(isValid)" class="error">Please Upload Banner Image</p>
+  <!-- <p *ngIf="!fileupload && fileupload.touched || (!fileupload && isValid)"
+  class="error">Please fill this field</p> -->
+
+  <p class="tag_label">Mobile Banner Image ( 960 X 369 px )</p>
+  <div class="mobile-banner-img" [ngClass]="{'img-sample' : mobileUrl}">
+     
+    <input type="file" id="galleryMobile"style="display: none"  accept="image/*" (change)="onSelectFileMobile($event)"    >
+    <label for="galleryMobile"  class="upload-img">
+
+        <img *ngIf = "mobileUrl" [src]="mobileUrl" style="width: 100%;">
+
+      <ul *ngIf = "!mobileUrl" class="list-unstyled">
+        <li class="list-items">
+          <i class="material-icons">
+            cloud_upload
+          </i>
+        </li>
+        <li class="list-items">
+          <span>Upload Mobile Banner Image</span>
+        </li>
+        <li class="list-items size-img">
+          <small>960 X 369 px</small>
+        </li>
+      </ul>
+    </label>
+    
+  </div>
+   <p *ngIf = "mobileWidth != '960' || mobileHeight != '369'" class="error">Invalid image size.Please upload image with specific size(960 X 369 px)</p>
+   <p *ngIf = "(isMobileValid)" class="error"> Please Upload Mobile Banner Image</p>
+
+
+
+  <div class="save-btns pull-right">
+    <ul class="list-unstyled">
+      <li class="list-items">
+        <a *ngIf = "id" class="btn btn-cancel" (click)="cancelEditCategory()">
+          CANCEL
+        </a>
+        <a *ngIf = "!id" class="btn btn-cancel" (click)="cancelCategory()">
+          CANCEL
+        </a>
+      </li>
+      <li class="list-items">
+        <a *ngIf = "id" class = "btn btn-info btn-add" (click)="updateCategory()" > UPDATE </a>
+        <a *ngIf = "!id" class="btn btn-info btn-add" (click)="addCategory()" >ADD</a>
+    </ul>
+  </div>
+  <div class="clearfix"></div>
+</div>

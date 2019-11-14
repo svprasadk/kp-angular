@@ -1,0 +1,303 @@
+.main-header {
+  padding: 0;
+  width: 100%;
+}
+
+.hil-navbar {
+
+  box-shadow: 0 10px 10px -10px rgba(0,0,0, 0.3);
+  margin: 0 !important;
+}
+
+.toggle-class {
+  position: relative;
+  top: 23px;
+  cursor: pointer;
+  color: #7d7d7d;
+}
+
+.hil-navbar .navbar-brand {
+  height: auto !important;
+
+}
+
+.admin-name {
+  float: right;
+  height: auto;
+  padding: 15px;
+  font-size: 16px;
+  margin-top: 10px;
+  line-height: 20px;
+  color: #7d7d7d;
+}
+
+.admin-name ul li {
+  display: inline-block;
+  padding: 0 10px 0 0;
+  cursor: pointer;
+}
+
+.drop-down-steps {
+  min-width: 114px;
+  right: 35px;
+  left: auto;
+  top: 70%;
+  float: right !important;
+}
+
+.drop-down-steps li a {
+  /* padding: 5px 0; */
+  cursor: pointer;
+}
+
+.user-image {
+  font-size: 18px;
+}
+
+/* .main-category {
+  width: 100%;
+}
+
+.sidenav-content {
+  width: 20%;
+  float: left;
+}
+
+.main-content {
+  width: 80%;
+  float: left;
+} */
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.wid-100 {
+  width: 100%;
+}
+
+.example-toolbar {
+  border-bottom: 1px solid rgb(160, 159, 159);
+}
+
+.example-is-mobile .example-toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+
+}
+
+h1.example-app-name {
+  margin-left: 8px;
+}
+
+.example-sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+}
+
+.example-is-mobile .example-sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+     `<body>` to be our scrolling element for mobile layouts. */
+  flex: 1 0 auto;
+}
+
+.mat-drawer.mat-drawer-side {
+  z-index: 2;
+  width: 15%;
+  min-width: 231px;
+}
+
+#circularG {
+  position: relative;
+  width: 113px;
+  height: 113px;
+  margin: auto;
+}
+
+.circularG {
+  position: absolute;
+  background-color: rgb(138,38,83);
+  width: 26px;
+  height: 26px;
+  border-radius: 17px;
+  -o-border-radius: 17px;
+  -ms-border-radius: 17px;
+  -webkit-border-radius: 17px;
+  -moz-border-radius: 17px;
+  animation-name: bounce_circularG;
+  -o-animation-name: bounce_circularG;
+  -ms-animation-name: bounce_circularG;
+  -webkit-animation-name: bounce_circularG;
+  -moz-animation-name: bounce_circularG;
+  animation-duration: 1.1s;
+  -o-animation-duration: 1.1s;
+  -ms-animation-duration: 1.1s;
+  -webkit-animation-duration: 1.1s;
+  -moz-animation-duration: 1.1s;
+  animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-direction: normal;
+  -o-animation-direction: normal;
+  -ms-animation-direction: normal;
+  -webkit-animation-direction: normal;
+  -moz-animation-direction: normal;
+}
+
+#circularG_1 {
+  left: 0;
+  top: 45px;
+  animation-delay: .41s;
+  -o-animation-delay: .41s;
+  -ms-animation-delay: .41s;
+  -webkit-animation-delay: .41s;
+  -moz-animation-delay: .41s;
+}
+
+#circularG_2 {
+  left: 11px;
+  top: 11px;
+  animation-delay: .55s;
+  -o-animation-delay: .55s;
+  -ms-animation-delay: .55s;
+  -webkit-animation-delay: .55s;
+  -moz-animation-delay: .55s;
+}
+
+#circularG_3 {
+  top: 0;
+  left: 45px;
+  animation-delay: .69s;
+  -o-animation-delay: .69s;
+  -ms-animation-delay: .69s;
+  -webkit-animation-delay: .69s;
+  -moz-animation-delay: .69s;
+}
+
+#circularG_4 {
+  right: 11px;
+  top: 11px;
+  animation-delay: .83s;
+  -o-animation-delay: .83s;
+  -ms-animation-delay: .83s;
+  -webkit-animation-delay: .83s;
+  -moz-animation-delay: .83s;
+}
+
+#circularG_5 {
+  right: 0;
+  top: 45px;
+  animation-delay: .97s;
+  -o-animation-delay: .97s;
+  -ms-animation-delay: .97s;
+  -webkit-animation-delay: .97s;
+  -moz-animation-delay: .97s;
+}
+
+#circularG_6 {
+  right: 11px;
+  bottom: 11px;
+  animation-delay: 1.1s;
+  -o-animation-delay: 1.1s;
+  -ms-animation-delay: 1.1s;
+  -webkit-animation-delay: 1.1s;
+  -moz-animation-delay: 1.1s;
+}
+
+#circularG_7 {
+  left: 45px;
+  bottom: 0;
+  animation-delay: 1.24s;
+  -o-animation-delay: 1.24s;
+  -ms-animation-delay: 1.24s;
+  -webkit-animation-delay: 1.24s;
+  -moz-animation-delay: 1.24s;
+}
+
+#circularG_8 {
+  left: 11px;
+  bottom: 11px;
+  animation-delay: 1.38s;
+  -o-animation-delay: 1.38s;
+  -ms-animation-delay: 1.38s;
+  -webkit-animation-delay: 1.38s;
+  -moz-animation-delay: 1.38s;
+}
+@keyframes bounce_circularG {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(.3);
+  }
+}
+@-o-keyframes bounce_circularG {
+  0% {
+    -o-transform: scale(1);
+  }
+
+  100% {
+    -o-transform: scale(.3);
+  }
+}
+@-ms-keyframes bounce_circularG {
+  0% {
+    -ms-transform: scale(1);
+  }
+
+  100% {
+    -ms-transform: scale(.3);
+  }
+}
+@-webkit-keyframes bounce_circularG {
+  0% {
+    -webkit-transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(.3);
+  }
+}
+@-moz-keyframes bounce_circularG {
+  0% {
+    -moz-transform: scale(1);
+  }
+
+  100% {
+    -moz-transform: scale(.3);
+  }
+}
+
+.loadbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: rgba(243, 243, 243, 0.3);
+  z-index: 1000;
+}
+
+.load {
+  margin: 0 auto;
+  position: relative;
+  top: 40%;
+  height: 50px;
+  width: 50px;
+}
+
+.holdScroll {
+  overflow: hidden !important;
+}

@@ -1,0 +1,15 @@
+<div class="main-success">
+  <div class="success-text text-center">
+    <h3 *ngIf="status == 'added'"class="success-message">Category has been successfully {{status}}</h3>
+    <h3 *ngIf="status == 'updated'" class="success-message">Category has been successfully {{status}}</h3>
+    <ul class="list-unstyled success-btns">
+      <li class="list-items">
+        <a routerLink= "/admin/categories" class="btn btn-default btn-category-list"> View Category List</a>
+
+      </li>
+      <li class="list-items">
+        <a routerLink= "/admin/products/add" class="btn btn-info btn-add-list"> Add Products </a>
+      </li>
+    </ul>
+  </div>
+</div>

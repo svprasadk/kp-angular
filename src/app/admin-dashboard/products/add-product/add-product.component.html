@@ -1,0 +1,114 @@
+<div class="col-sm-12 mar-top-40" *ngIf="productnotAdded">
+  <div class="col-sm-12">
+    <a routerLink="/admin/products">
+      <button class="btn back-btn">
+        <mat-icon class="icon-pos">chevron_left
+        </mat-icon>
+        <span class="back-class">Back</span>
+      </button>
+    </a>
+    <span>
+
+      <h4 class="lh-50 dis-in-b mar-l-20">{{id?'Edit Product':'Add Product'}}</h4>
+
+    </span>
+  </div>
+  <form #f="ngForm" (ngSubmit)="addProduct()" novalidate>
+
+
+    <div class="col-sm-12 form-inline text-right">
+      <div class="form-group top-Select">
+        <label for="sel1">Select Category</label>
+        <select class="form-control" id="sel1" [(ngModel)]="category" name="category" #categoryId="ngModel" required>
+          <option value="">Select Category</option>
+          <option *ngFor="let cat of categories" value="{{cat._id}}">{{cat.categoryName}}</option>
+
+        </select>
+        <div class="err-div">
+          <p class="error text-center" *ngIf="!categoryId.valid && categoryId.touched || formSubmitAttempt && !categoryId.valid">Please Select Category </p>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="col-sm-12">
+      <div class="form-group pro-title">
+        <label>Product Title* (maximum 40 characters)</label>
+        <input type="text" class="form-control" [(ngModel)]="productTitle" name="productTitle" maxlength="40" #proTitle="ngModel"
+          required>
+        <div class="err-div">
+          <p class="error" *ngIf="!proTitle.valid && proTitle.touched || formSubmitAttempt && !proTitle.valid">Please Enter Product Title </p>
+
+        </div>
+      </div>
+
+
+    </div>
+    <p class="tag_label">Web Banner Image ( 750X300 )</p>
+    <div class="col-sm-12">
+      <div class="col-sm-7 pad-zero ">
+        <div class="pad-zero ht-20-w Aligner">
+           
+          <label for="file" class="Aligner-item">
+            <mat-icon class="upload-icon" *ngIf="!imgsrc">
+              backup
+
+            </mat-icon>
+
+            <p *ngIf="!imgsrc">Upload Product Image (750X300)</p>
+
+            <img src="{{imgsrc}}" *ngIf="imgsrc" width="100%;">
+            <input id="file" type="file" (change)="fileUpload($event)" accept="image/*">
+          </label>
+        </div>
+        <p class="error" *ngIf="imageError ||(formSubmitAttempt&&!imgsrc)">Please provide image with the resolution we have mentioned </p>
+
+
+      </div>
+      <div class="col-sm-5 pd-r-0">
+        <textarea class="form-control ht-15vw" placeholder="Description*" [(ngModel)]="productDescription" name="productDescription"
+          #description="ngModel" required></textarea>
+        <p class="error" *ngIf="!description.valid && description.touched || formSubmitAttempt && !description.valid">Please Enter Product Description </p>
+
+
+      </div>
+      <p class="tag_label two">Mobile Banner Image ( 750X300 px)</p>
+      <div class="col-sm-7 pad-zero margin-top-10">
+        <div class="pad-zero ht-20-w Aligner">
+          
+          <label for="file2" class="Aligner-item">
+            <mat-icon class="upload-icon" *ngIf="!imgsrcMobile">
+              backup
+
+            </mat-icon>
+
+            <p *ngIf="!imgsrcMobile">Upload Product Image For Mobile (750X300)</p>
+
+            <img src="{{imgsrcMobile}}" *ngIf="imgsrcMobile" width="100%;">
+            <input id="file2" type="file" (change)="fileUpload2($event)" accept="image/*">
+          </label>
+        </div>
+        <!-- <p class="error" *ngIf="imageErrorMobile ||(formSubmitAttempt && !imgsrcMobile)">Please provide image with the resolution we have mentioned </p> -->
+
+
+      </div>
+    </div>
+    <div class="col-sm-12 text-right mar-top-40">
+      <button class="btn action-btn cancell-btn" (click)="cancelProduct()">CANCEL</button>
+      <button type="submit" class="btn action-btn liteblue-btn" [disabled]="imageError">{{id?'UPDATE':'ADD'}}</button>
+
+    </div>
+  </form>
+</div>
+<div class="col-sm-12 Aligner ht-95" *ngIf="!productnotAdded">
+  <div class="Aligner-item">
+    <h3 class="clr-green">Product has been successfully Added.</h3>
+    <div class="col-sm-12">
+      <button class="btn action-btn vpl" routerLink="/admin/products">View Product List</button>
+      <button class="btn action-btn vpl" (click)="addNewProduct()">Add More Products</button>
+
+      <button class="btn action-btn liteblue-btn vpl" routerLink="/admin/products/add-attribute/{{id}}">Add Attributes</button>
+
+    </div>
+  </div>
+</div>
